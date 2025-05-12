@@ -124,7 +124,7 @@ function showPhotoStrip() {
     ctx.fillStyle = "#fff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   
-    let photoWidth = 260; // Width of each photo (slightly smaller for the cute effect - but somehow still looks warped)
+    let photoWidth = 230; // Width of each photo (slightly smaller for the cute effect - but somehow still looks warped)
     let photoHeight = 280; // Height of each photo
     let gap = 20; // White space between photos (need 2 fix bcuz it looks kinda ugly)
     let yOffset = 10; // Initial Y offset for positioning the photos
