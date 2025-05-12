@@ -124,14 +124,14 @@ function showPhotoStrip() {
     ctx.fillStyle = "#fff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   
-    let photoWidth = 200; // Width of each photo (slightly smaller for the cute effect - but somehow still looks warped)
+    let photoWidth = 170; // Width of each photo (slightly smaller for the cute effect - but somehow still looks warped)
     let photoHeight = 280; // Height of each photo
     let gap = 20; // White space between photos (need 2 fix bcuz it looks kinda ugly)
     let yOffset = 10; // Initial Y offset for positioning the photos
   
     // Draw each photo with a gap in between
     photos.forEach((photo, i) => {
-      ctx.drawImage(photo, gap, yOffset + i * (photoHeight + gap), photoHeight, photoWidth);
+      ctx.drawImage(photo, gap, yOffset + i * (photoHeight + gap), photoWidth, photoHeight);
     });
   
     // Add message text if available 
