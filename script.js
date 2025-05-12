@@ -131,7 +131,7 @@ function showPhotoStrip() {
   
     // Draw each photo with a gap in between
     photos.forEach((photo, i) => {
-      ctx.drawImage(photo, gap, yOffset + i * (photoHeight + gap), photoWidth, photoHeight);
+      ctx.drawImage(photo, gap, yOffset + i * (photoHeight + gap), 100, 200);
     });
   
     // Add message text if available 
