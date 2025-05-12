@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eisha's Photobooth</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="welcome-screen" class="screen active">
+  <h1>🐤 Eisha's SHARE FAIR Photo Booth 🐤</h1>
+  <button id="start-btn" class="cute-button">Take Cute Pics</button>
+  <button onclick="showGallery()" class="cute-button">📷 View Gallery</button>
+</div>
+
+<div id="camera-screen" class="screen">
+  <p>Take 3 photos for your photo strip!</p>
+  <div class="filter-buttons">
+    <button data-filter="none">None</button>
+    <button data-filter="grayscale(1)">B&W</button>
+    <button data-filter="sepia(0.8)">Vintage</button>
+    <button data-filter="contrast(1.5) brightness(0.9)">Y2K</button>
+  </div>
+  <div class="camera-container">
+    <video id="video" autoplay muted></video>
+    <div id="countdown"></div>
+    <div id="flash" class="flash">FLASH!</div>
+  </div>
+  <button id="snap-btn" class="cute-button">📸 Take Photo</button>
+</div>
+
+<div id="message-screen" class="screen">
+  <h2>Enter a message for your photo strip:</h2>
+  <input type="text" id="message-input" placeholder="e.g. 'Best Day Ever'" />
+  <button id="add-message-btn" class="cute-button">Add Message</button>
+</div>
+
+<div id="sheet-screen" class="screen">
+  <h2>Your Cute Photo Strip</h2>
+  <canvas id="photo-strip" width="300" height="900"></canvas>
+  <a id="download-btn" download="photobooth_strip.png" class="cute-button">Download Strip</a>
+  <button id="restart-btn" class="cute-button">Save to Gallery and Start Over</button>
+  <script src="script.js"></script>
+</div>
+
+<div id="gallery-screen" class="screen">
+  <h2>Your Photo Gallery</h2>
+  <div id="gallery-container" class="gallery-scroll"></div>
+  <p id="gallery-empty-message" style="display: none;">You haven't taken any photo strips yet! 📸</p>
+  <button onclick="returnHome()" class="cute-button">🏠 Back to Home</button>
+</div>
+</body>
+</html>

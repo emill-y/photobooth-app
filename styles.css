@@ -1,0 +1,295 @@
+/* styles and cute fonts */ 
+/* credit to chatGPT for giving me the codes/ fonts for comic sans and colors! */ 
+/* For CS sharefair could make it like a yellow color theme (instead of pinks) and add lil duck images */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #fbe4f4;
+  color: #3a2e39;
+  text-align: center;
+}
+
+.screen {
+  display: none;
+  padding: 2rem;
+}
+
+.screen.active {
+  display: block;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffd6e8;
+  color: #3a2e39;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.camera-container {
+  position: relative;
+  display: inline-block;
+  border: 8px dotted #fff0f5;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+video {
+  width: 300px;
+  height: 400px;
+  filter: none;
+}
+
+#countdown {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.flash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  display: none;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 80%;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+canvas {
+  border: 5px solid white;
+  background: #fff;
+}
+
+/* Photo strip and layout */
+#photo-strip {
+  width: 320px; /* Slightly smaller width for the cute look */
+  height: 650px; /* Height to fit the 3 photos with gaps */
+  border: 8px solid #ffe066;
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0 auto; /* Center the photo strip */
+}
+
+.camera-container {
+  position: relative;
+  display: inline-block;
+  border: 8px dotted #fff0f5;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+video {
+  width: 300px;
+  height: 400px;
+  filter: none;
+}
+
+/* Countdown styling */
+#countdown {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Download button styling (cute and fun) */
+#download-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffe066; /* Soft pink */
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#download-btn:hover {
+  background-color: #ff4d7f; /* Darker pink on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+#download-btn:active {
+  transform: translateY(0); /* Slight press effect */
+}
+
+/* Gallery screen setup */
+#gallery-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#gallery-screen.active {
+  display: flex;
+}
+
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gallery-card {
+  flex: 0 0 auto;
+  width: 320px;
+  height: 650px;
+  border: 8px solid #ffe066;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Cute buttons */
+.cute-button {
+  background-color: #ff77a9;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cute-button:hover {
+  background-color: #ff4d7f;
+  transform: translateY(-2px);
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fffbea; /* light yellow */
+  color: #2a2a2a;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #3b5ba0; /* soft blue */
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+.cute-button {
+  background-color: #add8ff; /* light blue */
+  color: #2a2a2a;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cute-button:hover {
+  background-color: #8ecaff;
+}
+
+.filter-buttons button {
+  background-color: #ffe066; /* yellow accent */
+  color: #2a2a2a;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #ffd43b;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 80%;
+  border: 2px solid #add8ff;
+  border-radius: 8px;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.camera-container {
+  position: relative;
+  display: inline-block;
+  border: 5px solid #add8ff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.flash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  text-align: center;
+  line-height: 100px;
+  font-size: 2em;
+  font-weight: bold;
+}
